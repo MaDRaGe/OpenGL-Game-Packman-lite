@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EF1F32F5-520F-4A4A-A2C0-C61E48A4407E}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DevIL\include\;$(SolutionDir)\pugixml\src\;$(SolutionDir)\glew\include\GL\;$(SolutionDir)\glm\glm\;$(SolutionDir)\OpenAL\include\;$(SolutionDir)\freeglut\include\GL\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\OpenAL\libs\Win32\;$(SolutionDir)\DevIL\lib\x86\unicode\Release\;$(SolutionDir)\glew\lib\Release\Win32\;$(SolutionDir)\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;DevIL.lib;ILU.lib;ILUT.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Bomb.cpp" />
+    <ClCompile Include="..\Camera.cpp" />
+    <ClCompile Include="..\data.cpp" />
+    <ClCompile Include="..\Decal.cpp" />
+    <ClCompile Include="..\display.cpp" />
+    <ClCompile Include="..\GameObject.cpp" />
+    <ClCompile Include="..\GameObjectFactory.cpp" />
+    <ClCompile Include="..\GraphicObject.cpp" />
+    <ClCompile Include="..\Light.cpp" />
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\Material.cpp" />
+    <ClCompile Include="..\Mesh.cpp" />
+    <ClCompile Include="..\Monster.cpp" />
+    <ClCompile Include="..\Portal.cpp" />
+    <ClCompile Include="..\pugixml\src\pugixml.cpp" />
+    <ClCompile Include="..\simulation.cpp" />
+    <ClCompile Include="..\Sprite.cpp" />
+    <ClCompile Include="..\Texture.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="PhongMaterial.cpp" />
+    <ClCompile Include="PhongMaterialWithTexture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Bomb.h" />
+    <ClInclude Include="..\Camera.h" />
+    <ClInclude Include="..\Const.h" />
+    <ClInclude Include="..\data.h" />
+    <ClInclude Include="..\Decal.h" />
+    <ClInclude Include="..\display.h" />
+    <ClInclude Include="..\GameObject.h" />
+    <ClInclude Include="..\GameObjectFactory.h" />
+    <ClInclude Include="..\GraphicObject.h" />
+    <ClInclude Include="..\Light.h" />
+    <ClInclude Include="..\Material.h" />
+    <ClInclude Include="..\Mesh.h" />
+    <ClInclude Include="..\Monster.h" />
+    <ClInclude Include="..\Portal.h" />
+    <ClInclude Include="..\simulation.h" />
+    <ClInclude Include="..\Sprite.h" />
+    <ClInclude Include="..\Texture.h" />
+    <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="PhongMaterial.h" />
+    <ClInclude Include="PhongMaterialWithTexture.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
