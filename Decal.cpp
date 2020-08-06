@@ -2,7 +2,7 @@
 
 PhongMaterialWithTexture Decal::material;
 Mesh Decal::mesh;
-shared_ptr<Texture> Decal::texture = make_shared<Texture>();
+std::shared_ptr<Texture> Decal::texture = make_shared<Texture>();
 
 // Инициализация
 void Decal::init()

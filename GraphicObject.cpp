@@ -1,12 +1,11 @@
 #include "GraphicObject.h"
-using namespace std;
 
 // Конструкторы
 GraphicObject::GraphicObject()
 {
-    this->Position = vec3(0, 0, 0);
+    this->Position = glm::vec3(0, 0, 0);
     this->Angle = 0;
-    this->Color = vec3(0, 0, 0);
+    this->Color = glm::vec3(0, 0, 0);
     this->material = nullptr;
     this->mesh = nullptr;
     ModelMatrix[0] = 1;
@@ -15,7 +14,7 @@ GraphicObject::GraphicObject()
     ModelMatrix[15] = 1;
 }
 GraphicObject::GraphicObject(
-    vec3 pos, 
+    glm::vec3 pos,
     float angle
 )
 /*
@@ -34,7 +33,7 @@ GraphicObject::GraphicObject(
 }
 
 // Handle object position
-void GraphicObject::setPosition(vec3 &pos)
+void GraphicObject::setPosition(glm::vec3 &pos)
 /*
     Params:
         pos - object position
@@ -43,7 +42,7 @@ void GraphicObject::setPosition(vec3 &pos)
 	Position = pos;
 	recalculateModelMatrix();
 }
-vec3 GraphicObject::getPosition()
+glm::vec3 GraphicObject::getPosition()
 {
 	return Position;
 }

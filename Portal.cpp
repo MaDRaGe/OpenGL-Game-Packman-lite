@@ -5,13 +5,13 @@ Portal::Portal()
 	leave = true;
 	inPortal = false;
 }
-void Portal::add(ivec2 point)
+void Portal::add(glm::ivec2 point)
 {
     points.push_back(point);
 }
-ivec2 Portal::move(ivec2 point)
+glm::ivec2 Portal::move(glm::ivec2 point)
 {
-		vector<ivec2>::iterator IT;
+		std::vector<glm::ivec2>::iterator IT;
 		for (IT = points.begin(); IT != points.end(); IT++)
 		{
 			if (IT->x == point.x
@@ -33,7 +33,7 @@ ivec2 Portal::move(ivec2 point)
 		
 }
 
-void Portal::simulate(ivec2 heroPos)
+void Portal::simulate(glm::ivec2 heroPos)
 {
 	inPortal = playerInPortal(heroPos);
 }
@@ -47,7 +47,7 @@ bool Portal::isLeave()
     return leave;
 }
 
-bool Portal::playerInPortal(ivec2 heroPos)
+bool Portal::playerInPortal(glm::ivec2 heroPos)
 {
     for (auto point : points)
     {

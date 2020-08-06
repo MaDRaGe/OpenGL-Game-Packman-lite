@@ -27,13 +27,13 @@ void AudioManager::init()
 }
 
 // Установить позицию слушателя
-void AudioManager::setListenerPosition(vec3 position)
+void AudioManager::setListenerPosition(glm::vec3 position)
 {
     ALfloat listenerPos[3] = { position.x, position.y, position.z };
-    vec3 at = normalize(vec3(0 - position.x, 0 - position.y, 0 - position.z));
-    vec3 supplied = vec3(0, 1, 0);
-    vec3 right = cross(supplied, at);
-    vec3 up = normalize(cross(at, right));
+    glm::vec3 at = glm::normalize(glm::vec3(0 - position.x, 0 - position.y, 0 - position.z));
+    glm::vec3 supplied = glm::vec3(0, 1, 0);
+    glm::vec3 right = cross(supplied, at);
+    glm::vec3 up = normalize(cross(at, right));
     ALfloat listenerOrientation[6] = { at.x, at.y, at.z, up.x, up.y, up.z };
     alListenerfv(AL_POSITION, listenerPos);
     alListenerfv(AL_ORIENTATION, listenerOrientation);
@@ -41,7 +41,7 @@ void AudioManager::setListenerPosition(vec3 position)
 }
 
 // Проигрывание звука
-void AudioManager::play(SoundType sound, vec3 position)
+void AudioManager::play(SoundType sound, glm::vec3 position)
 {
     if (sound == AMBIENT)
     {

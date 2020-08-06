@@ -3,8 +3,6 @@
 #include <vector>
 #include "GameObject.h"
 
-using namespace std;
-
 class Portal
 {
 public:
@@ -12,24 +10,24 @@ public:
     Portal();
 
     // Добавить координаты новой точки входа
-    void add(ivec2);
+    void add(glm::ivec2);
 
     // Портал пуст ?
     bool isLeave();
 
     // Игрок в портале
-    bool playerInPortal(ivec2);
+    bool playerInPortal(glm::ivec2);
 
 	bool isInPortal();
 
     // Переместить игрока
-    ivec2 move(ivec2);
+    glm::ivec2 move(glm::ivec2);
 
-    void simulate(ivec2 playerPos);
+    void simulate(glm::ivec2 playerPos);
 
 private:
     bool leave;
 	bool inPortal;
     // Точки входа в портал
-    vector<ivec2> points;
+    std::vector<glm::ivec2> points;
 };

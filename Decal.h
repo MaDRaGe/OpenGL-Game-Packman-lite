@@ -1,15 +1,10 @@
 #pragma once
-#include <stdio.h>
 #include "GraphicObject.h"
 #include "Project1/PhongMaterialWithTexture.h"
 #include "Texture.h"
 #include "Mesh.h"
-#include <gl/GL.h>
-#include <gl/GLU.h>
 #include "freeglut.h"
 #include "glm.hpp"
-
-using namespace std;
 
 class Decal
 {
@@ -36,5 +31,5 @@ private:
 
     static PhongMaterialWithTexture material;
     static Mesh mesh;
-    static shared_ptr<Texture> texture;
+    static std::shared_ptr<Texture> texture;
 };
