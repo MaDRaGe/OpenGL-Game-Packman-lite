@@ -25,17 +25,17 @@ void Mesh::draw()
 }
 
 // Загрузить меш из файла
-void Mesh::load(string filename)
+void Mesh::load(std::string filename)
 /*
     Параметры:
         filename - путь к файлу
 */
 {
-    ifstream file(filename.c_str());
-    string param, tmp;
-    vector<vec3> v;  // Геометрические координаты
-    vector<vec3> vn; // Координаты нормалей
-    vector<vec3> vt; // Текстурные коорднаты
+    std::ifstream file(filename.c_str());
+    std::string param, tmp;
+    std::vector<glm::vec3> v;  // Геометрические координаты
+    std::vector<glm::vec3> vn; // Координаты нормалей
+    std::vector<glm::vec3> vt; // Текстурные коорднаты
     if (file.is_open()) // Файл открыт
     {
 		// Загрузить параметры вершины меша
@@ -45,7 +45,7 @@ void Mesh::load(string filename)
 			file >> param;
             if (param == "v")
             {
-                vec3 newV;
+                glm::vec3 newV;
                 file >> newV.x;
                 file >> newV.y;
                 file >> newV.z;
@@ -55,7 +55,7 @@ void Mesh::load(string filename)
             // Координаты нормалей
             if (param == "vn")
             {
-                vec3 newV;
+                glm::vec3 newV;
                 file >> newV.x;
                 file >> newV.y;
                 file >> newV.z;
@@ -65,7 +65,7 @@ void Mesh::load(string filename)
             // Текстурные координаты
             if (param == "vt")
             {
-                vec3 newV;
+                glm::vec3 newV;
                 file >> newV.x;
                 file >> newV.y;
                 file >> newV.z;
@@ -102,10 +102,10 @@ void Mesh::load(string filename)
 // Добавить индекс вершины
 void Mesh::addNewVertex
     (
-        string param, 
-        vector<vec3>& v, 
-        vector<vec3>& vn, 
-        vector<vec3>& vt
+        std::string param,
+        std::vector<glm::vec3>& v,
+        std::vector<glm::vec3>& vn,
+        std::vector<glm::vec3>& vt
     )
 {
     auto it = vertexToIndex.find(param);
@@ -116,7 +116,7 @@ void Mesh::addNewVertex
     else
     {
         vertices.push_back(createVertex(param, v, vn, vt));
-        vertexToIndex.insert(make_pair(param, vertexToIndex.size()));
+        vertexToIndex.insert(std::make_pair(param, vertexToIndex.size()));
         indices.push_back(vertexToIndex.size() - 1);
     }
 }
@@ -124,13 +124,13 @@ void Mesh::addNewVertex
 // Создать вершину
 Vertex Mesh::createVertex
     (
-        string param, 
-        vector<vec3>& v, 
-        vector<vec3>& vn, 
-        vector<vec3>& vt
+        std::string param,
+        std::vector<glm::vec3>& v,
+        std::vector<glm::vec3>& vn,
+        std::vector<glm::vec3>& vt
     )
 {
-    string index;    // Индекс в строковом формате
+    std::string index;    // Индекс в строковом формате
     int f;           // Индекс
     int i = 0;       // Позиция курсора в строке
     Vertex newVertex;// Новая вершина
@@ -161,11 +161,6 @@ Vertex Mesh::createVertex
     newVertex.texCoord[0] = vt[f - 1].x;
     newVertex.texCoord[1] = vt[f - 1].y;
     //newVertex.texCoord[2] = vt[f - 1].z;
-    /*cout 
-        << "TEXCOORD: " 
-        << newVertex.texCoord[0] << " " 
-        << newVertex.texCoord[1] << " " 
-        << newVertex.texCoord[2] << endl;*/
 
     // Координаты нормалей
     index = "";
@@ -178,10 +173,5 @@ Vertex Mesh::createVertex
     newVertex.normal[0] = vn[f - 1].x;
     newVertex.normal[1] = vn[f - 1].y;
     newVertex.normal[2] = vn[f - 1].z;
-    /*cout
-        << "NORMALS: "
-        << newVertex.normal[0] << " "
-        << newVertex.normal[1] << " "
-        << newVertex.normal[2] << endl;*/
     return newVertex;
 }

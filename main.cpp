@@ -1,11 +1,4 @@
 #pragma once
-#include <stdio.h>
-#include <windows.h>
-#include <iostream>
-#include <fstream>
-
-#include <string>
-#include <sstream>
 
 #include "glew.h"
 
@@ -15,19 +8,13 @@
 
 #include <gl/GL.h>
 #include "freeglut.h"
-#include "glm.hpp"
-#include "gtx/string_cast.hpp"
 
 #include "data.h"
 #include "simulation.h"
 #include "display.h"
-#include "Sprite.h"
 
 #include "al.h"
 #include "alc.h"
-
-using namespace glm;
-using namespace std;
 
 // Изменение размера окна
 void Reshape(int w, int h){
@@ -51,7 +38,7 @@ void main(void){
 
 	// Определить контекст рендеринга
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH | GLUT_MULTISAMPLE);
-    glutInitContextVersion(4, 0);
+    glutInitContextVersion(3, 0);
     glEnable(GL_MULTISAMPLE);
     onMSAA = true;
 

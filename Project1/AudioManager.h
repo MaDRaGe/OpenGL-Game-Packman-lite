@@ -1,12 +1,8 @@
 #pragma once
-#include <stdio.h>
 #include "freeglut.h"
 #include "glm.hpp"
 #include "al.h"
 #include "alc.h"
-
-using namespace std;
-using namespace glm;
 
 enum SoundType 
 {
@@ -47,10 +43,10 @@ public:
     void init();
 
     // Установить позицию слушателя
-    void setListenerPosition(vec3 position);
+    void setListenerPosition(glm::vec3 position);
 
     // Начать проигрывание
-    void play(SoundType sound, vec3 position = vec3());
+    void play(SoundType sound, glm::vec3 position = glm::vec3());
 
     // Остановить проигрывание
     void stop(SoundType sound);

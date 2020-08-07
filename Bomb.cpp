@@ -33,7 +33,7 @@ void Bomb::start(
     exploded = false;
     progress = timeToExplode;
     this->timeToExplode = timeToExplode;
-    gameObject->setPosition(ivec2(x, y));
+    gameObject->setPosition(glm::ivec2(x, y));
 }
 
 ivec2 Bomb::getPosition()
@@ -53,15 +53,15 @@ bool Bomb::isExploded()
     return exploded;
 }
 
-void Bomb::setGameObject(shared_ptr<GameObject> gameObject)
+void Bomb::setGameObject(std::shared_ptr<GameObject> gameObject)
 {
     this->gameObject = gameObject;
 }
 
 // Установить интерфейс на экране
 void Bomb::setHUD(
-    shared_ptr<Sprite> icon, 
-    shared_ptr<Sprite> tick
+    std::shared_ptr<Sprite> icon,
+    std::shared_ptr<Sprite> tick
 )
 {
     this->icon = icon;

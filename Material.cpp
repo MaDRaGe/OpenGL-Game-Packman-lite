@@ -3,44 +3,44 @@
 // Конструкторы
 Material::Material() { }
 
-void Material::setAmbient(string color) {
-    stringstream newColor(color);
+void Material::setAmbient(std::string color) {
+    std::stringstream newColor(color);
     newColor >> ambient.r;
     newColor >> ambient.g;
     newColor >> ambient.b;
     ambient.a = 1;
 }
-void Material::setDiffuse(string color) {
-    stringstream newColor(color);
+void Material::setDiffuse(std::string color) {
+    std::stringstream newColor(color);
     newColor >> diffuse.r;
     newColor >> diffuse.g;
     newColor >> diffuse.b;
     newColor >> diffuse.a;
 }
-void Material::setSpecular(string color) {
-    stringstream newColor(color);
+void Material::setSpecular(std::string color) {
+    std::stringstream newColor(color);
     newColor >> specular.r;
     newColor >> specular.g;
     newColor >> specular.b;
     specular.a = 1;
 }
-void Material::setEmission(string color) {
-    stringstream newColor(color);
+void Material::setEmission(std::string color) {
+    std::stringstream newColor(color);
     newColor >> emission.r;
     newColor >> emission.g;
     newColor >> emission.b;
     emission.a = 1;
 }
-void Material::setShininess(string color) {
-    stringstream newColor(color);
+void Material::setShininess(std::string color) {
+    std::stringstream newColor(color);
     newColor >> shininess;
 }
 
 //  Загрузить параметры из файла
 void Material::load(const char* filename)
 {
-    ifstream file(filename);
-    string line, tmp;
+    std::ifstream file(filename);
+    std::string line, tmp;
     if (file.is_open()) // Файл открыть
     {
         while (!file.eof()) // До конца файла

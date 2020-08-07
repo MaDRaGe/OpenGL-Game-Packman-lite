@@ -1,2 +1,14 @@
-﻿  main.cpp
+﻿  data.cpp
+  display.cpp
+  GameObjectFactory.cpp
+  main.cpp
+  simulation.cpp
+H:\_Labs\Project1\display.cpp(10,35): warning C4305: аргумент: усечение из "double" в "GLclampf"
+H:\_Labs\Project1\simulation.cpp(16,26): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+H:\_Labs\Project1\simulation.cpp(19,24): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+H:\_Labs\Project1\simulation.cpp(23,24): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+H:\_Labs\Project1\simulation.cpp(289,43): warning C4018: <: несоответствие типов со знаком и без знака
+  PhongMaterial.cpp
+  Создание кода...
+H:\_Labs\Project1\simulation.cpp(314,23): warning C4018: <: несоответствие типов со знаком и без знака
   Project1.vcxproj -> H:\_Labs\Project1\Debug\Project1.exe

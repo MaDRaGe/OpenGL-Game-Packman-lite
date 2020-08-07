@@ -1,23 +1,11 @@
 #pragma once
-#include <stdio.h>
-#include <windows.h>
 #include <fstream>
-#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
-
 #include "glew.h"
-
-#include <gl/GL.h>
 #include "freeglut.h"
-
 #include "glm.hpp"
-#include "gtc\matrix_transform.hpp"
-#include "gtc\type_ptr.hpp"
-
-using namespace std;
-using namespace glm;
 
 struct Vertex
 {
@@ -30,28 +18,28 @@ class Mesh
 {
 public:
     Mesh(); // Конструктор
-    void load(string filename); // Загрузить меш из файла
+    void load(std::string filename); // Загрузить меш из файла
     void draw(); // Вывести меш
 
 private:
     void addNewVertex // Добавить новую вершину
         (
-            string param, 
-            vector<vec3>& v, 
-            vector<vec3>& vn,
-            vector<vec3>& vt
+            std::string param,
+            std::vector<glm::vec3>& v,
+            std::vector<glm::vec3>& vn,
+            std::vector<glm::vec3>& vt
         );
     Vertex createVertex // Создать вершину
         (
-            string, 
-            vector<vec3>&, 
-            vector<vec3>&, 
-            vector<vec3>&
+            std::string,
+            std::vector<glm::vec3>&,
+            std::vector<glm::vec3>&,
+            std::vector<glm::vec3>&
         );
 
 private:
-    vector<Vertex> vertices; // Вершины
-    vector<GLuint> indices; // Индексы
-    map<string,int> vertexToIndex;
+    std::vector<Vertex> vertices; // Вершины
+    std::vector<GLuint> indices; // Индексы
+    std::map<std::string,int> vertexToIndex;
 	GLuint buffers[2]; // Буферы
 };

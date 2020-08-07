@@ -2,12 +2,12 @@
 
 Camera::Camera()
 { 
-    position = vec3(0,30,30); 
+    position = glm::vec3(0,30,30);
     calcDistance(); 
     calcAngleA(); 
     calcAngleB(); 
 }
-Camera::Camera(vec3 position) 
+Camera::Camera(glm::vec3 position)
 { 
     this->position = position; 
     calcDistance(); 
@@ -20,7 +20,7 @@ Camera::Camera(
     float z
 )
 { 
-    position = vec3(x, y, z); 
+    position = glm::vec3(x, y, z);
     calcDistance(); 
     calcAngleA(); 
     calcAngleB();  
@@ -33,12 +33,12 @@ void Camera::calcPosition()
     position.x = distance * cos(3.14 / 180 * angleA) * cos(3.14 / 180 * angleB);
     position.z = distance * cos(3.14 / 180 * angleA) * sin(3.14 / 180 * angleB);
 }
-void Camera::setPosition(vec3 position)
+void Camera::setPosition(glm::vec3 position)
 { 
     this->position = position; 
 
 }
-vec3 Camera::getPosition()
+glm::vec3 Camera::getPosition()
 { 
     return position; 
 }
