@@ -1,7 +1,7 @@
 # PackMan-lite
 
 [![OpenGL](https://img.shields.io/badge/lib-OpenGL-cyan.svg)](https://www.opengl.org/)
-[![glew](https://img.shields.io/badge/lib-glew-green.svg)](http://glew.sourceforge.net/)
+[![glew](https://img.shields.io/badge/lib-glew-<COLOR>.svg)](http://glew.sourceforge.net/)
 [![pugixml](https://img.shields.io/badge/lib-pugixml-<COLOR>.svg)](https://pugixml.org/)
 [![glm](https://img.shields.io/badge/lib-glm-orange.svg)](https://glm.g-truc.net/0.9.9/index.html)
 [![DevIL](https://img.shields.io/badge/lib-DevIL-gray.svg)](http://openil.sourceforge.net/)
