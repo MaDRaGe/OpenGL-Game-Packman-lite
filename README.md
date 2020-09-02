@@ -1,7 +1,6 @@
 # PackMan-lite
 
-[![none text](https://img.shields.io/website-up-down-green-red/http/perso.crans.org.svg)](http://perso.crans.org/)
-
+[![none text](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
 
 ![Screen of game](https://github.com/MaDRaGe/OpenGL-Game-Packman-lite/blob/master/Packman.PNG?raw=true)
 
