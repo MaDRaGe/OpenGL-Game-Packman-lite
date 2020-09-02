@@ -1,6 +1,11 @@
 # PackMan-lite
 
-[![none text](https://img.shields.io/badge/text-none-<COLOR>.svg)](https://shields.io/)
+[![OpenGL](https://img.shields.io/badge/lib-OpenGL-<COLOR>.svg)](https://www.opengl.org/)
+[![glew](https://img.shields.io/badge/lib-glew-<COLOR>.svg)](http://glew.sourceforge.net/)
+[![pugixml](https://img.shields.io/badge/lib-pugixml-<COLOR>.svg)](https://pugixml.org/)
+[![glm](https://img.shields.io/badge/lib-glm-<COLOR>.svg)](https://glm.g-truc.net/0.9.9/index.html)
+[![DevIL](https://img.shields.io/badge/lib-DevIL-<COLOR>.svg)](http://openil.sourceforge.net/)
+[![OpenAL](https://img.shields.io/badge/lib-OpenAL-<COLOR>.svg)](https://openal.org/)
 
 ![Screen of game](https://github.com/MaDRaGe/OpenGL-Game-Packman-lite/blob/master/Packman.PNG?raw=true)
 
