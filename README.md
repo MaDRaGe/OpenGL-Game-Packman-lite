@@ -1,3 +1,3 @@
 # PackMan-lite
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Screen of game](https://github.com/MaDRaGe/OpenGL-Game-Packman-lite/blob/master/Packman.PNG?raw=true)
