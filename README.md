@@ -1,6 +1,6 @@
 # PackMan-lite
 
-[![none text](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
+[![none text](https://img.shields.io/badge/text-none-<COLOR>.svg)](https://shields.io/)
 
 ![Screen of game](https://github.com/MaDRaGe/OpenGL-Game-Packman-lite/blob/master/Packman.PNG?raw=true)
 
